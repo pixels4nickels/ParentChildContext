@@ -11,5 +11,10 @@ package shared
 		{
 			super(type, bubbles, cancelable);
 		}
+
+		override public function clone():Event
+		{
+			return new StateEvent(type, bubbles, cancelable);
+		}
 	}
 }
